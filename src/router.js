@@ -1,8 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import WelcomePage from "./components/WelcomePage.vue";
+import AddExercise from "./components/AddExercise/AddExercise.vue";
+
 const router = createRouter({
   history: createWebHistory(),
-  routes: [],
+  routes: [
+    { path: "/", component: WelcomePage },
+    { path: "/add", component: AddExercise },
+  ],
 });
 
 export default router;

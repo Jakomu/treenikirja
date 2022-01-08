@@ -11,7 +11,7 @@
 
 <style>
 footer {
-  background-color: red;
+  background-color: #ff0202d8;
   color: white;
   display: flex;
   justify-content: space-evenly;
