@@ -15,6 +15,7 @@ p {
   padding: 1rem;
 }
 header {
+  display: block;
   background-color: #ff0202d8;
   color: #fff8ee;
   text-align: center;

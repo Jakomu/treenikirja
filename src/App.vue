@@ -1,16 +1,21 @@
 <template>
   <the-header></the-header>
-  <!-- <aside><nav><navigation-tabs></navigation-tabs></nav></aside> -->
-  <router-view></router-view>
-  <the-footer></the-footer>
+  <div class="flex">
+    <aside>
+      <navigation-tabs></navigation-tabs>
+    </aside>
+    <router-view class="main"></router-view>
+  </div>
+  <the-footer class="footer"></the-footer>
 </template>
 
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
 import TheFooter from "./components/layout/TheFooter.vue";
+import NavigationTabs from "./components/layout/NavigationTabs.vue";
 
 export default {
-  components: { TheHeader, TheFooter },
+  components: { TheHeader, TheFooter, NavigationTabs },
 };
 </script>
 
@@ -25,5 +30,17 @@ html {
 body {
   margin: 0;
   background-color: #fff8ee;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+aside {
+  flex-grow: 2;
+  max-width: 200px;
+}
+.main {
+  flex-grow: 8;
+  max-width: 500px;
 }
 </style>

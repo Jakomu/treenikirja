@@ -17,7 +17,7 @@
       <div>
         <p>Add one or both:</p>
         <label for="distance">Distance: </label>
-        <input type="number" name="distance" id="distance" />
+        <input type="number" name="distance" id="distance" /><br />
         <label for="duration">Duration: </label>
         <input type="number" name="duration" id="duration" />
       </div>
