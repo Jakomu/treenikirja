@@ -8,6 +8,7 @@ const router = createRouter({
   routes: [
     { path: "/", component: WelcomePage },
     { path: "/add", component: AddExercise },
+    { path: "/:notFound(.*)", redirect: "/" },
   ],
 });
 

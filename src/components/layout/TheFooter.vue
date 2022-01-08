@@ -11,6 +11,10 @@
 
 <style>
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
   background-color: #ff0202d8;
   color: #fff8ee;
   display: flex;
