@@ -12,8 +12,9 @@
 <style>
 footer {
   background-color: #ff0202d8;
-  color: white;
+  color: #fff8ee;
   display: flex;
   justify-content: space-evenly;
+  display: flex;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <the-header></the-header>
+  <!-- <aside><nav><navigation-tabs></navigation-tabs></nav></aside> -->
   <router-view></router-view>
   <the-footer></the-footer>
 </template>
@@ -23,5 +24,6 @@ html {
 
 body {
   margin: 0;
+  background-color: #fff8ee;
 }
 </style>

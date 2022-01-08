@@ -16,7 +16,7 @@ p {
 }
 header {
   background-color: #ff0202d8;
-  color: white;
+  color: #fff8ee;
   text-align: center;
 }
 </style>
