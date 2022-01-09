@@ -13,8 +13,14 @@ const store = createStore({
     };
   },
   mutations: {
-    submitExercise(payload) {
-      console.log(payload);
+    submitExercise(state, payload) {
+      state.sport = payload.sport;
+      state.date = payload.date;
+      state.time = payload.time;
+      state.distance = payload.distance;
+      state.duration = payload.duration;
+      state.feeling = payload.feeling;
+      state.notes = payload.notes;
     },
   },
   actions: {

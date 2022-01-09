@@ -72,7 +72,6 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     submitExerciseForm(event) {
-      console.log(event.target.time.value);
       const data = {
         sport: event.target.sport.value,
         date: event.target.date.value,
@@ -82,10 +81,9 @@ export default {
         feeling: event.target.feeling.value,
         notes: event.target.notes.value,
       };
-      this.submitExercise(data);
+      console.log(data);
+      this.$store.commit("submitExercise", data);
     },
-  },
-  computed: {
     ...mapActions(["submitExercise"]),
   },
 };
