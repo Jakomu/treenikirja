@@ -72,17 +72,25 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     submitExerciseForm(event) {
-      const data = {
-        sport: event.target.sport.value,
-        date: event.target.date.value,
-        time: event.target.time.value,
-        distance: event.target.distance.value,
-        duration: event.target.duration.value,
-        feeling: event.target.feeling.value,
-        notes: event.target.notes.value,
+      const data = event.target;
+      if (
+        data.sport.value == "" ||
+        data.date.value == "" ||
+        data.time.value == ""
+      ) {
+        alert("You must have at least sport, date and time selected!");
+        return;
+      }
+      const payload = {
+        sport: data.sport.value,
+        date: data.date.value,
+        time: data.time.value,
+        distance: data.distance.value,
+        duration: data.duration.value,
+        feeling: data.feeling.value,
+        notes: data.notes.value,
       };
-      console.log(data);
-      this.$store.commit("submitExercise", data);
+      this.$store.commit("submitExercise", payload);
     },
     ...mapActions(["submitExercise"]),
   },

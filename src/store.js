@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import axios from "axios";
 
 const store = createStore({
   state() {
@@ -13,14 +14,9 @@ const store = createStore({
     };
   },
   mutations: {
-    submitExercise(state, payload) {
-      state.sport = payload.sport;
-      state.date = payload.date;
-      state.time = payload.time;
-      state.distance = payload.distance;
-      state.duration = payload.duration;
-      state.feeling = payload.feeling;
-      state.notes = payload.notes;
+    submitExercise(_, payload) {
+      const data = payload;
+      axios.post(process.env.VUE_APP_FIREBASE_URL, data);
     },
   },
   actions: {
