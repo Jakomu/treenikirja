@@ -4,7 +4,9 @@
     <aside>
       <navigation-tabs></navigation-tabs>
     </aside>
-    <router-view class="main"></router-view>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
   <the-footer class="footer"></the-footer>
 </template>
@@ -42,5 +44,6 @@ aside {
 .main {
   flex-grow: 8;
   max-width: 500px;
+  margin-top: 50px;
 }
 </style>

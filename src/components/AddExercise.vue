@@ -81,7 +81,13 @@ export default {
         alert("You must have at least sport, date and time selected!");
         return;
       }
+      let idnum = data.date.value;
+      idnum = idnum.replace("-", "0");
+      idnum = idnum.replace("-", "0");
+      let idnum2 = data.time.value.replace(":", "0");
+      const idnumber = parseInt(idnum + idnum2);
       const payload = {
+        id: idnumber,
         sport: data.sport.value,
         date: data.date.value,
         time: data.time.value,

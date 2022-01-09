@@ -1,36 +1,30 @@
 <template>
   <nav>
-    <div :class="{ active: welcomeActive }" @click="changeTab(1)">
+    <div
+      :class="{ active: this.$store.state.welcomeActive }"
+      @click="chooseTab(1)"
+    >
       <p>Welcome</p>
     </div>
-    <div :class="{ active: addActive }" @click="changeTab(2)">
+    <div :class="{ active: this.$store.state.addActive }" @click="chooseTab(2)">
       <p>Add exercise</p>
     </div>
-    <div>
+    <div
+      :class="{ active: this.$store.state.exercisesActive }"
+      @click="chooseTab(3)"
+    >
       <p>Exercises</p>
     </div>
   </nav>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      welcomeActive: true,
-      addActive: false,
-    };
-  },
   methods: {
-    changeTab(tab) {
-      if (tab == 1) {
-        this.$router.push("/welcome");
-        this.welcomeActive = true;
-        this.addActive = false;
-      } else if (tab == 2) {
-        this.$router.push("/add");
-        this.welcomeActive = false;
-        this.addActive = true;
-      }
+    ...mapActions(["changeTab"]),
+    chooseTab(tab) {
+      this.$store.commit("changeTab", tab);
     },
   },
 };
