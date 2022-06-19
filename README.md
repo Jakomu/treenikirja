@@ -1,5 +1,4 @@
 # Treenikirja
-This is part of my "portfolio".
 Using HTML, CSS, JavaScript, Vue.js, Vuex and Firebase's realtime database.
 This is definitely not finished product, since I have been creating this only for couple of days.
 There is some bugs and styling is not finished. There are lot of plans for future improvement:
